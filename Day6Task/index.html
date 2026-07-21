@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>User Management System</h1>
+
+        <div class="form">
+
+            <input type="text" id="firstName" placeholder="First Name">
+
+            <input type="text" id="lastName" placeholder="Last Name">
+
+            <input type="number" id="age" placeholder="Age">
+
+            <label class="checkBox">
+                <input type="checkbox" id="graduated">
+                Is Graduated
+            </label>
+
+            <button id="addBtn" onclick="addOrUpdateUser()">
+                Add User
+            </button>
+
+        </div>
+
+        <div class="searchSection">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search By Name..."
+                onkeyup="searchUser()"
+            >
+
+            <label class="checkBox">
+                <input
+                    type="checkbox"
+                    id="filterGraduate"
+                    onchange="filterGraduated()"
+                >
+                Show Graduated Only
+            </label>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Graduated</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tbody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="mainDom.js"></script>
+
+</body>
+</html>
